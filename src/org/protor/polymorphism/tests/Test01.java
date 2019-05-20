@@ -8,7 +8,7 @@ public class Test01 {
 	public static void main(String[] args) {
 		
 		Vehicle v1 = new Vehicle(VehicleType.TERRESTRIAL);
-		v1.setName("Fiat 500");
+		v1.setName("Fiat 600");
 		
 		Vehicle v2 = new Vehicle("Eurofighter", VehicleType.AERIAL);
 
