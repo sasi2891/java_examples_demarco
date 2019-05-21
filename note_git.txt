@@ -1,0 +1,24 @@
+Creare repository con GitHub
+
+https://help.github.com/en/articles/create-a-repo
+
+https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
+
+cd <path-to-repo>
+git init
+git add .
+git commit -m "First commit"
+git remote add origin remote <repository URL>
+git push origin master
+
+--------------------------------------------------
+
+git remote -v
+
+Una sola volta:
+git remote add upstream https://github.com/agodemar/java_examples_demarco
+
+Più volte:
+git fetch upstream
+
+git merge upstream/master
