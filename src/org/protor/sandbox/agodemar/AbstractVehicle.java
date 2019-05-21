@@ -4,14 +4,14 @@ import java.io.File;
 
 public abstract class AbstractVehicle {
 	
-	private String name = "";
-	private EnumEngineType engineType = EnumEngineType.NONE;
-	private double range = 0.0; // km
-	private double endurance = 0.0; // hours
-	private int numMaxPassengers = 0;
-	private double maxPayload = 0.0; // kg
+	protected String name = "";
+	protected EnumEngineType engineType = EnumEngineType.NONE;
+	protected double range = 0.0; // km
+	protected double endurance = 0.0; // hours
+	protected int numMaxPassengers = 0;
+	protected double maxPayload = 0.0; // kg
 	
-	private File configFile;
+	protected File configFile;
 	
 	// --------------------------------------------- Constructors
 	public AbstractVehicle(File configFile) {

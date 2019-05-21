@@ -4,7 +4,7 @@ import java.io.File;
 
 public abstract class AbstractTerrestrialVehicle extends AbstractVehicle {
 	
-	private EnumGroundContactType groundContactType = EnumGroundContactType.WHEELS;
+	protected EnumGroundContactType groundContactType = EnumGroundContactType.WHEELS;
 
 	public AbstractTerrestrialVehicle(EnumEngineType engineType) {
 		super(engineType);
