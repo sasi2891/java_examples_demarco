@@ -32,7 +32,22 @@ public class Car extends AbstractTerrestrialVehicle {
 		
 		// TODO agodemar: implement the logic here
 		
+		System.out.println("[Car] Reading data from file: "
+				+ configFile.getAbsolutePath());
+		
+		System.out.println("... function not implemented yet.");
+		
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("--- Car Object ---\n");
+		sb.append("Name: " + this.name + "\n");
+		sb.append("Ground contact: " + this.groundContactType + "\n");
+		sb.append("Engine type: " + this.engineType + "\n");
+		sb.append("------------------------\n");
+		return sb.toString();
+	}
+	
 }
