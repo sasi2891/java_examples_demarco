@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+	<car id="CAR-001">
+		<description>
+			Put some text here
+		</description>
+		<name>Nissan XTrail</name>
+		<engine_type value="THERMICAL"/>
+		<number_of_wheels value="4">
+		<range_km value="500"/>
+		<endurance_hr value="5.0"/>
+		<passengers value="4"/>
+		<payload_kg value="250.0"/>
+	</car>
+</cars>
