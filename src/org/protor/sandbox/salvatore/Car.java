@@ -2,40 +2,52 @@ package org.protor.sandbox.salvatore;
 
 import java.io.File;
 
-public  class Car extends AbstractTerrestrialVehicle{
+public class Car extends AbstractTerrestrialVehicle {
 
-	public Car(EnumEngineType type) {
-		super(type);
-		// TODO Auto-generated constructor stub
+	public Car(EnumEngineType engineType) {
+		super(engineType);
 	}
 
 	public Car(File configFile) {
 		super(configFile);
-		// TODO Auto-generated constructor stub
 	}
 
-	public Car(String name, EnumEngineType engineType, double range, double endurance, int numMaxPassegers,
+	public Car(String name, EnumEngineType engineType, double range, double endurance, int numMaxPassengers,
 			double maxPayload, EnumGroundContactType groundContactType) {
-		super(name, engineType, range, endurance, numMaxPassegers, maxPayload, groundContactType);
-		// TODO Auto-generated constructor stub
+		super(name, engineType, range, endurance, numMaxPassengers, maxPayload, groundContactType);
+
 	}
 
-	public Car(String name, EnumEngineType engineType, double range, double endurance, int numMaxPassegers,
+	public Car(String name, EnumEngineType engineType, double range, double endurance, int numMaxPassengers,
 			double maxPayload) {
-		super(name, engineType, range, endurance, numMaxPassegers, maxPayload);
-		// TODO Auto-generated constructor stub
+		super(name, engineType, range, endurance, numMaxPassengers, maxPayload);
 	}
 
-	public Car(String name, EnumEngineType type) {
-		super(name, type);
-		// TODO Auto-generated constructor stub
+	public Car(String name, EnumEngineType engineType) {
+		super(name, engineType);
 	}
 
 	@Override
 	protected boolean loadFromFile(File configFile) {
+		
+		// TODO agodemar: implement the logic here
+		
 		System.out.println("[Car] Reading data from file: "
-		+configFile.getAbsolutePath());
+				+ configFile.getAbsolutePath());
+		
+		System.out.println("... function not implemented yet.");
+		
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("--- Car Object ---\n");
+		sb.append("Name: " + this.name + "\n");
+		sb.append("Ground contact: " + this.groundContactType + "\n");
+		sb.append("Engine type: " + this.engineType + "\n");
+		sb.append("------------------------\n");
+		return sb.toString();
+	}
+	
 }

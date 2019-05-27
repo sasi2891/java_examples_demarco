@@ -3,119 +3,97 @@ package org.protor.sandbox.salvatore;
 import java.io.File;
 
 public abstract class AbstractVehicle {
-
-	private String name = "";
-	private EnumEngineType engineType= EnumEngineType.NONE;
-	private double range = 0.0; //kilometres
-	private double endurance = 0.0; //hours
-	private int numMaxPassegers= 0;
-	private double maxPayload = 0.0; //kg
-	private File configFile;
-	//-------------------------- CONSTRUCTORS
+	
+	protected String name = "";
+	protected EnumEngineType engineType = EnumEngineType.NONE;
+	protected double range = 0.0; // km
+	protected double endurance = 0.0; // hours
+	protected int numMaxPassengers = 0;
+	protected double maxPayload = 0.0; // kg
+	
+	protected File configFile;
+	
+	// --------------------------------------------- Constructors
 	public AbstractVehicle(File configFile) {
-		super();
 		this.configFile = configFile;
-		this.loadFromFile(configFile);
+		this.loadFromFile(this.configFile);
 	}
-
-
-
 	protected abstract boolean loadFromFile(File configFile);
+	
+	public AbstractVehicle(EnumEngineType engineType) {
+		this.engineType = engineType;
+	}
 
-	public AbstractVehicle(EnumEngineType type) {
-		this.engineType = type;
-	}
-	public AbstractVehicle(String name, EnumEngineType type) {
+	public AbstractVehicle(String name, EnumEngineType engineType) {
 		this.name = name;
-		this.engineType = type;
+		this.engineType = engineType;
 	}
+
 	/**
 	 * 
-	 * @param name Name of Vehicle
-	 * @param engineType Type of Vehicle
-	 * @param range Number of kilometries (km)
-	 * @param endurance km with full fuel (hours)
-	 * @param numMaxPassegers Numbers of Passengers
-	 * @param maxPayload Maximum Payload (kg)
+	 * @param name Name of the Vehicle
+	 * @param engine Type Type of the engine
+	 * @param range Maximum possible distance (km)
+	 * @param endurance Maximum possible travel time (hours)
+	 * @param numMaxPassengers Maximum number of passengers
+	 * @param maxPayload Maximum payload (kg)
 	 */
-	public AbstractVehicle(String name, 
-			EnumEngineType engineType, double range, 
-			double endurance, int numMaxPassegers,
-			double maxPayload) {
-
-
+	public AbstractVehicle(
+			String name,
+			EnumEngineType engineType, 
+			double range, double endurance, 
+			int numMaxPassengers, double maxPayload) {
 		this.name = name;
 		this.engineType = engineType;
 		this.range = range;
 		this.endurance = endurance;
-		this.numMaxPassegers = numMaxPassegers;
+		this.numMaxPassengers = numMaxPassengers;
 		this.maxPayload = maxPayload;
 	}
 
-	//-----------------------------	 METHODS
+	// --------------------------------------------- Methods
+	/**
+	 * 
+	 * @return Returns the given name of the vehicle
+	 */
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public EnumEngineType getEngineType() {
 		return engineType;
 	}
+
 	public void setEngineType(EnumEngineType engineType) {
 		this.engineType = engineType;
 	}
-
-
-
 	public double getRange() {
 		return range;
 	}
-
-
-
 	public void setRange(double range) {
 		this.range = range;
 	}
-
-
-
 	public double getEndurance() {
 		return endurance;
 	}
-
-
-
 	public void setEndurance(double endurance) {
 		this.endurance = endurance;
 	}
-
-
-
-	public int getNumMaxPassegers() {
-		return numMaxPassegers;
+	public int getNumMaxPassengers() {
+		return numMaxPassengers;
 	}
-
-
-
-	public void setNumMaxPassegers(int numMaxPassegers) {
-		this.numMaxPassegers = numMaxPassegers;
+	public void setNumMaxPassengers(int numMaxPassengers) {
+		this.numMaxPassengers = numMaxPassengers;
 	}
-
-
-
 	public double getMaxPayload() {
 		return maxPayload;
 	}
-
-
-
 	public void setMaxPayload(double maxPayload) {
 		this.maxPayload = maxPayload;
 	}
-
-
-
-
 
 }

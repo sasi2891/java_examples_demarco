@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cars>
-	<car id="CAR-001">
+	<car id="CAR-001" >
 		<description>
-			Put some text here
+			the worst japanese SUV
 		</description>
 		<name>Nissan XTrail</name>
 		<engine_type value="THERMICAL"/>
-		<number_of_wheels value="4">
+		<number_of_wheels value="4"/>
 		<range_km value="500"/>
 		<endurance_hr value="5.0"/>
 		<passengers value="4"/>
 		<payload_kg value="250.0"/>
 	</car>
+	<car id="CAR-002">
+		<description>
+			the german half suv
+		</description>
+		<name>BMW X1</name>
+		<engine_type value="THERMICAL"/>
+		<number_of_wheels value="4"/>
+		<range_km value="650"/>
+		<endurance_hr value="6.0"></endurance_hr>
+		<passengers value="4"/>
+		<payload_kg value="260.0"/>
+	</car>
+	<car id="CAR-003">
+		<description>
+			the italian SUV
+		</description>
+		<name>Fiat 500 X</name>
+		<engine_type value="THERMICAL"/>
+		<number_of_wheels value="4"/>
+		<range_km value="450"/>
+		<endurance_hr value="4.5"/>
+		<passengers value="4"/>
+		<payload_kg value="250.0"/>
+	</car>
+	
 </cars>

@@ -5,5 +5,4 @@ public enum EnumEngineType {
 	ELECTRIC,
 	HYBRID,
 	NONE
-
 }
