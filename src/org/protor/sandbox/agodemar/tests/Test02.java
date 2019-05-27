@@ -10,6 +10,10 @@ public class Test02 {
 
 	public static void main(String[] args) {
 
+		System.out.println(
+				"Input files will be read from dir: "
+				+ System.getenv("INPUTS_DIR"));
+		
 		// "C:\Users\PC5\demarco\github\java_examples_demarco\input"
 		// String fileName = "cars.xml";
 		// File carsFile = new File("input"+ File.separator + fileName);

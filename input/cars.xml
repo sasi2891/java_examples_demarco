@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cars>
-	<car id="CAR-001">
+	<car id="CAR-001" date="20192705">
 		<description>
-			The worst Japanese SUV
+			The worst Japanese 
+			SUV
 		</description>
 		<name>Nissan XTrail</name>
 		<engine_type value="THERMICAL" />
@@ -14,7 +15,8 @@
 	</car>
 	<car id="CAR-002">
 		<description>
-			The german half-SUV
+			The german 
+			half-SUV
 		</description>
 		<name>BMW X1</name>
 		<engine_type value="THERMICAL" />

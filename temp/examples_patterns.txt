@@ -1,0 +1,43 @@
+[Builder pattern]
+
+Car car1 = CarBuilder
+				.setRange(500.3)
+				.setEndurance(6.5)
+				.setPassengers(4)
+				.build();
+				
+Car car2 = new Car(500.3, 6.5, 4); // less intuitive
+
+Car car3 = CarBuilder
+				.setEndurance(6.5) // order swapped
+				.setRange(500.3)
+				.setPassengers(4)
+				.build();
+
+Car car4 = CarBuilder
+				.setEndurance(6.5)
+				.setRange(500.3)
+				.build(); // default passenger number; partial assignment
+				
+Car car5 = CarBuilder.build(); // no assignment; all default values (?)
+
+RaceWinner winner = Race.startRace(
+	CarBuilder
+				.setEndurance(6.5) // order swapped
+				.setSpeed(180)
+				.setPassengers(4)
+				.build(),
+	CarBuilder
+				.setEndurance(6.5) // order swapped
+				.setSpeed(200)
+				.setPassengers(2)
+				.build()
+	);
+System.out.println("Time of the race: " + winner.getElapsedTime());
+List<Car> participants = winner.getParticipantsList();
+
+
+[Factory pattern]
+
+Car car1 = CarFactory.newInstance();
+car1.setRange(450);
