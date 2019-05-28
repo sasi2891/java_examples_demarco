@@ -2,8 +2,11 @@ package org.protor.sandbox.salvatore;
 
 import java.io.File;
 
-public class Car extends AbstractTerrestrialVehicle {
+import org.protor.filesio.utils.XMLUtils;
+import org.w3c.dom.Node;
 
+public class Car extends AbstractTerrestrialVehicle {
+    
 	public Car(EnumEngineType engineType) {
 		super(engineType);
 	}
@@ -26,18 +29,24 @@ public class Car extends AbstractTerrestrialVehicle {
 	public Car(String name, EnumEngineType engineType) {
 		super(name, engineType);
 	}
-
-	@Override
-	protected boolean loadFromFile(File configFile) {
+	public static Car createCarFromXmlNode(Node node) {
+		return null;
 		
-		// TODO agodemar: implement the logic here
+	}
+	@Override
+	protected void loadFromFile(File configFile) {
+		
 		
 		System.out.println("[Car] Reading data from file: "
 				+ configFile.getAbsolutePath());
 		
 		System.out.println("... function not implemented yet.");
 		
-		return false;
+		
+	}
+	protected void loadFromNode(Node node) {
+		String carName = XMLUtils.getXMLPropertyByPath(node, "//name/text()");
+		// TODO Auto-generated method stub
 	}
 
 	@Override
@@ -49,5 +58,7 @@ public class Car extends AbstractTerrestrialVehicle {
 		sb.append("------------------------\n");
 		return sb.toString();
 	}
+
+	@Override
 	
 }

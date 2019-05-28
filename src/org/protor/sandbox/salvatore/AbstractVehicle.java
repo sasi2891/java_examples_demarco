@@ -2,6 +2,8 @@ package org.protor.sandbox.salvatore;
 
 import java.io.File;
 
+import org.w3c.dom.Node;
+
 public abstract class AbstractVehicle {
 	
 	protected String name = "";
@@ -12,13 +14,19 @@ public abstract class AbstractVehicle {
 	protected double maxPayload = 0.0; // kg
 	
 	protected File configFile;
+	protected Node node;
 	
 	// --------------------------------------------- Constructors
 	public AbstractVehicle(File configFile) {
 		this.configFile = configFile;
 		this.loadFromFile(this.configFile);
 	}
-	protected abstract boolean loadFromFile(File configFile);
+	protected abstract void loadFromFile(File configFile); //implement in subclasses
+	public AbstractVehicle(Node node) {     //implement in subclass
+		this.node = node;
+		this.loadFromNode(this.node);
+	}
+	protected abstract void loadFromNode(Node node);//implement in subclass
 	
 	public AbstractVehicle(EnumEngineType engineType) {
 		this.engineType = engineType;

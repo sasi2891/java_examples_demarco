@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cars>
-<<<<<<< HEAD
+
 	<car id="CAR-001" >
 		<description>
 			the worst japanese SUV
@@ -12,7 +12,7 @@
 		<endurance_hr value="5.0"/>
 		<passengers value="4"/>
 		<payload_kg value="250.0"/>
-=======
+
 	<car id="CAR-001" date="20192705">
 		<description>
 			The worst Japanese 
@@ -50,7 +50,7 @@
 		<endurance_hr value="5.0" />
 		<passengers value="4" />
 		<payload_kg value="200.0" />
->>>>>>> upstream/master
+
 	</car>
 	<car id="CAR-002">
 		<description>
