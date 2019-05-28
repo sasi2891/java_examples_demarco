@@ -80,7 +80,7 @@ public class XMLUtils {
 
 			List<String> attributes = XMLUtils.getXMLPropertiesByPath(doc, path+"/@"+ attribute);
 
-			System.out.println("getXMLAttributesByPath :: attributes \""+ attribute +"\" found: " + attributes.size());
+			//System.out.println("getXMLAttributesByPath :: attributes \""+ attribute +"\" found: " + attributes.size());
 			return attributes;
 
 		} catch (ParserConfigurationException e) {
@@ -89,6 +89,41 @@ public class XMLUtils {
 		}
 	}
 
+	/**
+	 * Get an attribute for a given XPath search string
+	 * into a _node_
+	 *
+	 * @author Agostino De Marco
+	 * @param node to start searching
+	 * @param path to node where attribute is searched for
+	 * @param attribute label
+	 * @return attribute value if found, null otherwise
+	 */	
+	public static String getXMLAttributeByPath(Node node, String path, String attribute) {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setNamespaceAware(true);
+		DocumentBuilder builder;
+		try {
+			builder = factory.newDocumentBuilder();
+			Document doc = builder.newDocument();
+			Node importedNode = doc.importNode(node, true);
+			doc.appendChild(importedNode);
+
+			List<String> attributes = XMLUtils.getXMLPropertiesByPath(doc, path+"/@"+ attribute);
+
+			if (attributes.size() > 0) {
+				//System.out.println("getXMLAttributesByPath :: attribute \""+ attribute +"\" found.");
+				return attributes.get(0);
+			} else
+				return null;
+
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
 	/*
 	 * Get the list of property values for a given XPath expression
 	 * @param document
@@ -152,8 +187,41 @@ public class XMLUtils {
 			Node importedNode = doc.importNode(node, true);
 			doc.appendChild(importedNode);
 			List<String> props = XMLUtils.getXMLPropertiesByPath(doc, expression);
-			System.out.println("XMLUtils :: getXMLPropertyByPath :: properties found: " + props.size());
-			System.out.println("props[0] " + props.get(0));
+			//System.out.println("XMLUtils :: getXMLPropertyByPath :: properties found: " + props.size());
+			//System.out.println("props[0] " + props.get(0));
+			if (props.size() == 0)
+				return null;
+			else
+				return props.get(0);
+			
+		} catch (ParserConfigurationException e) {
+			System.err.println("########################## XMLUtils :: getXMLPropertyByPath");
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	/**
+	 * Get the first occurrence of a property for a given XPath search string
+	 * into a _node_; "/text()" is appended atb the end of XPath string
+	 *
+	 * @author Agostino De Marco
+	 * @param node
+	 * @param expression (no /text() at the end)
+	 * @return property value
+	 */
+	public static String getXMLPropertyTextByPath(Node node, String expression) {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setNamespaceAware(true);
+		DocumentBuilder builder;
+		try {
+			builder = factory.newDocumentBuilder();
+			Document doc = builder.newDocument();
+			Node importedNode = doc.importNode(node, true);
+			doc.appendChild(importedNode);
+			List<String> props = XMLUtils.getXMLPropertiesByPath(doc, expression+"/text()");
+			//System.out.println("XMLUtils :: getXMLPropertyByPath :: properties found: " + props.size());
+			//System.out.println("props[0] " + props.get(0));
 			if (props.size() == 0)
 				return null;
 			else
