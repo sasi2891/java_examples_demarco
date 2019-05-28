@@ -1,0 +1,14 @@
+
+Esercitazione:
+
+1. Creare un metodo di costruzione di oggetti
+   Car che accetta un argomento di tipo Node
+
+2. Creare una classe VehicleUtils in cui
+   inserire una funzione static 
+  
+   List<Car> loadListOfCars(File xmlFile)
+
+3. Modificare il programma Test03 --> Test04
+   in modo da usare le nuove features di cui 
+   ai punti precedenti.

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicles>
+	<ships>
+		<!-- todo -->
+	</ships>
+	<airplanes>
+		<!-- todo -->
+	</airplanes>
+	<cars>
+		<car id="CAR-001" date="20192705">
+			<description>
+				The worst Japanese
+				SUV
+			</description>
+			<name>Nissan XTrail</name>
+			<engine_type value="THERMICAL" />
+			<number_of_wheels value="4" />
+			<range_km value="500" />
+			<endurance_hr value="5.0" />
+			<passengers value="4" />
+			<payload_kg value="250.0" />
+		</car>
+		<car id="CAR-002">
+			<description>
+				The german
+				half-SUV
+			</description>
+			<name>BMW X1</name>
+			<engine_type value="THERMICAL" />
+			<number_of_wheels value="4" />
+			<range_km value="600" />
+			<endurance_hr value="6.0" />
+			<passengers value="4" />
+			<payload_kg value="260.0" />
+		</car>
+		<car id="CAR-003">
+			<description>
+				The italian half-SUV
+			</description>
+			<name>Fiat 500 X</name>
+			<engine_type value="THERMICAL" />
+			<number_of_wheels value="4" />
+			<range_km value="450" />
+			<endurance_hr value="5.0" />
+			<passengers value="4" />
+			<payload_kg value="200.0" />
+		</car>
+	</cars>
+</vehicles>
