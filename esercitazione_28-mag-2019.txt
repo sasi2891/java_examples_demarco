@@ -1,8 +1,8 @@
 
 Esercitazione:
 
-1. Creare un costruttore della classe Car
-   che accetta un argomento di tipo Node
+1. Creare un metodo di costruzione di oggetti
+   Car che accetta un argomento di tipo Node
 
 2. Creare una classe VehicleUtils in cui
    inserire una funzione static 

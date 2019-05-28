@@ -2,6 +2,8 @@ package org.protor.sandbox.agodemar;
 
 import java.io.File;
 
+import org.w3c.dom.Node;
+
 public abstract class AbstractTerrestrialVehicle extends AbstractVehicle {
 	
 	protected EnumGroundContactType groundContactType = EnumGroundContactType.WHEELS;
@@ -32,6 +34,10 @@ public abstract class AbstractTerrestrialVehicle extends AbstractVehicle {
 		this.groundContactType = groundContactType;
 	}
 	
+	public AbstractTerrestrialVehicle(Node node) {
+		super(node);
+	}
+
 	public EnumGroundContactType getGroundContactType() {
 		return groundContactType;
 	}
