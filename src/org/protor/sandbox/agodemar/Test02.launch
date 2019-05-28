@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/java_examples_demarco/src/org/protor/sandbox/agodemar/tests/Test02.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="INPUTS_DIR" value="${INPUTS_DIR}"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.protor.sandbox.agodemar.tests.Test02"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="${INPUTS_DIR}\cars.xml&#13;&#10;${INPUTS_DIR}\ships.xml&#13;&#10;${INPUTS_DIR}\airplanes.xml"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="java_examples_demarco"/>
+</launchConfiguration>
