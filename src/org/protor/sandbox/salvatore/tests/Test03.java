@@ -10,7 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.protor.filesio.utils.XMLUtils;
-import org.protor.sandbox.salvatore.Car;
+import org.protor.sandbox.salvatore.MyCar;
 import org.protor.sandbox.salvatore.EnumEngineType;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -62,7 +62,7 @@ public class Test03 {
 				NodeList nodeList = doc.getElementsByTagName("car");
 				System.out.println("N. cars: " + nodeList.getLength());
 
-				List<Car> cars = new ArrayList<>();
+				List<MyCar> cars = new ArrayList<>();
 
 				for (int iNode = 0; iNode < nodeList.getLength(); iNode++) {
 
@@ -129,7 +129,7 @@ public class Test03 {
 						}
 
 						// Task: create an object of class Car...
-						Car car = new Car (
+						MyCar car = new MyCar (
 								carName, engineType, range, endurance, pass, payload);
 						
 						System.out.println(car);

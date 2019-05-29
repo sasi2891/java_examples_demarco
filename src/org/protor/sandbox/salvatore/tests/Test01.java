@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.protor.sandbox.salvatore.AbstractVehicle;
-import org.protor.sandbox.salvatore.Car;
+import org.protor.sandbox.salvatore.MyCar;
 import org.protor.sandbox.salvatore.EnumEngineType;
 import org.protor.sandbox.salvatore.EnumGroundContactType;
 
@@ -24,12 +24,12 @@ public class Test01 {
 		System.out.println("v2 - Name: " + v2.getName());
 		System.out.println("v2 - Type: " + v2.getType());
 		 */
-		Car car1 = new Car(
+		MyCar car1 = new MyCar(
 				"Tesla model 3", 
 				EnumEngineType.ELECTRIC, 
 				500.0, 4.5,  4, 500.0, EnumGroundContactType.WHEELS);
 
-		Car car2 = new Car(EnumEngineType.THERMICAL);
+		MyCar car2 = new MyCar(EnumEngineType.THERMICAL);
 		car2.setName("BMW X1");
 
 //		System.out.println(car1.toString());
@@ -37,19 +37,19 @@ public class Test01 {
 
 		System.out.println("--------------------------");
 
-		List<Car> list = new ArrayList<Car>();
+		List<MyCar> list = new ArrayList<MyCar>();
 		
 		list.add(car1);
 		list.add(car2);
 		list.add(
-				new Car(
+				new MyCar(
 						"Nissan XTrail", 
 						EnumEngineType.THERMICAL, 
 						500.0, 4.5,  4, 500.0, EnumGroundContactType.WHEELS
 						)
 				);
 		
-		for(Car c : list) {
+		for(MyCar c : list) {
 			System.out.println(c);
 		}
 
