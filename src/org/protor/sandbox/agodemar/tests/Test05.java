@@ -1,12 +1,15 @@
 package org.protor.sandbox.agodemar.tests;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.protor.sandbox.agodemar.Car;
 import org.protor.sandbox.agodemar.VehicleUtils;
 
 public class Test05 {
+
+	public static List<Car> cars = new ArrayList<Car>();
 
 	public static void main(String[] args) {
 		
@@ -23,6 +26,7 @@ public class Test05 {
 			else
 				System.out.println("Found " + cars.size() + " cars.");
 			
+			Test05.cars = cars;
 			
 		} else {
 			System.err.println(
