@@ -7,8 +7,9 @@ Esercitazione:
 2. Creare una classe VehicleUtils in cui
    inserire una funzione static 
   
-   List<Car> loadListOfCars(File xmlFile)
+   public static List<Car> loadListOfCars(File xmlFile)
 
-3. Modificare il programma Test03 --> Test04
+3. Modificare il programma 
+   Test03 --> Test04, Test05
    in modo da usare le nuove features di cui 
    ai punti precedenti.
