@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class C extends AbstractB{
+public class C extends AbstractB  { 
 	double f;
 	List <Double> l;
 	public C() {
@@ -35,5 +35,26 @@ public class C extends AbstractB{
 	 					e quindi posso ripetere l'operazione*/
 		return sb.toString();
 	}
-
+	/**
+	 * get all numbers contained in an object of class c and collect them in a list of double.
+	 * moltiply integers by a and double by i
+	 * @param a
+	 * @param b
+	 * @returnlist of numbers
+	 */
+	public List<Double> getAllNumbers(double a, double b) {
+		List<Double> allNumbers=new ArrayList<Double>();
+		allNumbers.add((this.i*a));
+		allNumbers.add(this.d*b);
+		allNumbers.add(this.f*b);
+		for (int k:this.ia) {
+			allNumbers.add((double) k*a);  //ad all numbers aggiungo tutti gli interi dell array
+			
+		}
+		//TODO: make the math operation via Stream/Map
+		allNumbers.addAll(this.l);
+	
+		return allNumbers;
+	}
+	
 }

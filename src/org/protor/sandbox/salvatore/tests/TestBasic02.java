@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.protor.sandbox.salvatore.basic.C;
+import org.protor.sandbox.salvatore.basic.ToyC;
 
 public class TestBasic02 {
 	public static void main(String[]args) {
@@ -20,7 +21,12 @@ public class TestBasic02 {
 				0.9, l0
 				);				//<---C
 		System.out.println(c2);
-
-
+		List<C> nodes= new ArrayList<C>();
+		nodes.add(c1);
+		nodes.add(c2);
+		ToyC tc=new ToyC();
+		List<Double> numbers = tc.calculate1a(nodes, -20.0, 89.5);
+		tc.setInnerList(numbers);
+		System.out.println(tc);
 	}
 }
